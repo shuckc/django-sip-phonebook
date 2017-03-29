@@ -24,6 +24,7 @@ Quick start
 4. Start the development server and visit http://127.0.0.1:8000/admin/
    to setup phone book entries (you'll need the Admin app enabled).
 
-5. Setup your Grandstream IP phone to fetch it's phonebook from http://127.0.0.1:8000 
+5. Setup your Grandstream IP phone to fetch it's phonebook from 
+	http://127.0.0.1:8000/phonebook/gs_phonebook.xml
    and verify you can call the contacts you added.
 

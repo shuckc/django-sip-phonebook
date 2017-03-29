@@ -3,9 +3,9 @@
     <version>1</version>
     {% for contact in contacts %}
     <Contact>
-        <id>{% forloop.index %}</id>
-        <FirstName>{{contact.firstname}}</FirstName>
-        <LastName>{{contact.lastname}}</LastName>
+        <id>{{forloop.counter}}</id>
+        <FirstName>{{contact.first_name}}</FirstName>
+        <LastName>{{contact.last_name}}</LastName>
         <Department>Sales</Department>
         <Primary>2</Primary>
         <Frequent>0</Frequent>
@@ -13,7 +13,7 @@
             <phonenumber>{{contact.number}}</phonenumber>
             <accountindex>1</accountindex>
         </Phone>
-        <Mail type="Work">{{contact.email}}</Mail>
+        {% if contact.email %}<Mail type="Work">{{contact.email}}</Mail>{% endif %}
     </Contact>
     {% endfor %}
 
