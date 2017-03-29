@@ -13,7 +13,7 @@ test_requirements = [
 
 setup(
     name='django-sip-phonebook',
-    version='1.0.7',
+    version='1.0.8',
     description='Django based phonebook for Granstream telephones.',
     long_description='Django based phonebook for Granstream telephones.',
     author='Chris Shucksmith',

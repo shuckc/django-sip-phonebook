@@ -10,9 +10,14 @@
         <Primary>2</Primary>
         <Frequent>0</Frequent>
         <Phone type="Mobile">
-            <phonenumber>{{contact.number}}</phonenumber>
+            <phonenumber>{{contact.phone_number}}</phonenumber>
             <accountindex>1</accountindex>
         </Phone>
+        {% if contact.group %}
+        <Groups>
+            <groupid>contact.group.id</groupid>
+        </Groups>
+        {% endif %}
         {% if contact.email %}<Mail type="Work">{{contact.email}}</Mail>{% endif %}
     </Contact>
     {% endfor %}
