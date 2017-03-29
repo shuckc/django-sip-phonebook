@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AddressBook>
+    <version>1</version>
+    {% for contact in contacts %}
+    <Contact>
+        <id>{% forloop.index %}</id>
+        <FirstName>{{contact.firstname}}</FirstName>
+        <LastName>{{contact.lastname}}</LastName>
+        <Department>Sales</Department>
+        <Primary>2</Primary>
+        <Frequent>0</Frequent>
+        <Phone type="Mobile">
+            <phonenumber>{{contact.number}}</phonenumber>
+            <accountindex>1</accountindex>
+        </Phone>
+        <Mail type="Work">{{contact.email}}</Mail>
+    </Contact>
+    {% endfor %}
+
+</AddressBook>

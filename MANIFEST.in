@@ -1,0 +1,11 @@
+include *.rst
+include LICENSE
+ 
+recursive-include tests *
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+ 
+recursive-include docs *.rst conf.py Makefile
+recursive-include phonebook/static *
+recursive-include phonebook/templates *
+
