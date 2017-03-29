@@ -1,17 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import re
 from setuptools import setup, find_packages
-
-version = ''
-
-with open('phonebook/__init__.py') as init:
-    version = re.search(r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]',
-       init.read(), re.MULTILINE).group(1)
-
-with open('README.md') as readme:
-    long_description = readme.read()
 
 requirements = [
     # Your project's requirements
@@ -23,9 +13,9 @@ test_requirements = [
 
 setup(
     name='django-sip-phonebook',
-    version=version,
+    version='1.0.1',
     description='Django based phonebook for Granstream telephones.',
-    long_description=long_description, 
+    long_description='Django based phonebook for Granstream telephones.',
     author='Chris Shucksmith',
     url='https://github.com/shuckc/django-sip-phonebook',
     author_email='chris@shucksmith.co.uk',
