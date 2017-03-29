@@ -7,3 +7,8 @@ class Contact(models.Model):
 
     def __str__(self):
         return "{0} {1}".format(self.first_name, self.last_name)
+
+    class Meta:
+    	permissions = (
+    		("phonebook_download", u"Download phonebook via. basic authentication."),
+    	)

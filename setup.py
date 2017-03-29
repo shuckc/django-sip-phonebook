@@ -4,7 +4,7 @@
 from setuptools import setup, find_packages
 
 requirements = [
-    # Your project's requirements
+    "django-basic-authentication-decorator"
 ]
 
 test_requirements = [
@@ -13,7 +13,7 @@ test_requirements = [
 
 setup(
     name='django-sip-phonebook',
-    version='1.0.3',
+    version='1.0.5',
     description='Django based phonebook for Granstream telephones.',
     long_description='Django based phonebook for Granstream telephones.',
     author='Chris Shucksmith',

@@ -3,9 +3,9 @@ from django.http import HttpResponseRedirect, HttpResponse
 
 from .models import Contact
 
-from django_basic_auth import logged_in_or_basicauth
+from django_basic_auth import has_perm_or_basicauth
 
-@logged_in_or_basicauth
+@has_perm_or_basicauth('phonebook_download')
 def phonebook(request):
     contacts = Contact.objects.all()
     return render(request, 'phonebook/names.xml', {

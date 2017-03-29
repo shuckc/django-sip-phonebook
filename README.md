@@ -1,5 +1,6 @@
 # django-sip-phonebook
-A django-powered central phonebook and provisioning server for Grandstream telephones
+A django-powered central phonebook and provisioning server for Grandstream telephones. For more information on the format see http://www.grandstream.com/sites/default/files/Resources/gxp_wp_xml_phonebook.pdf
+
 
 [![PyPi packaged](https://badge.fury.io/py/django-sip-phonebook.svg)](http://badge.fury.io/py/django-sip-phonebook)
 
