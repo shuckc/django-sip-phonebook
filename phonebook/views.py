@@ -5,7 +5,7 @@ from .models import Contact
 
 from django_basic_auth import has_perm_or_basicauth
 
-@has_perm_or_basicauth('phonebook_download')
+@has_perm_or_basicauth('phonebook.phonebook_download')
 def phonebook(request):
     contacts = Contact.objects.all()
     return render(request, 'phonebook/names.xml', {
