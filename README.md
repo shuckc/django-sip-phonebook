@@ -1,6 +1,8 @@
 # django-sip-phonebook
 A django-powered central phonebook and provisioning server for Grandstream telephones
 
+[![PyPi packaged](https://badge.fury.io/py/django-sip-phonebook.svg)](http://badge.fury.io/py/django-sip-phonebook)
+
 
 Quick start
 -----------
