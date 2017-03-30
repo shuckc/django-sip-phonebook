@@ -1,24 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <AddressBook>
     <version>1</version>
+    {% for group in groups %}
+    <pbgroup>
+        <id>{{group.index}}</id>
+        <name>{{group.name}}</name>
+    </pbgroup>
+    {% endfor %}
     {% for contact in contacts %}
     <Contact>
         <id>{{forloop.counter}}</id>
         <FirstName>{{contact.first_name}}</FirstName>
         <LastName>{{contact.last_name}}</LastName>
-        <Department>Sales</Department>
-        <Primary>2</Primary>
-        <Frequent>0</Frequent>
+        {% if contact.job_title %}
+        <JobTitle>{{contact.job_title}}</JobTitle>
+        {% endif %}
         <Phone type="Mobile">
             <phonenumber>{{contact.phone_number}}</phonenumber>
             <accountindex>1</accountindex>
         </Phone>
         {% if contact.group %}
         <Groups>
-            <groupid>contact.group.id</groupid>
+            <groupid>{{contact.group.index}}</groupid>
         </Groups>
         {% endif %}
-        {% if contact.email %}<Mail type="Work">{{contact.email}}</Mail>{% endif %}
+        {% if contact.email %}
+          <Mail type="Work">{{contact.email}}</Mail>
+          <Company>company</Company>
+          <Department>department</Department>
+          <Job>job description</Job>
+        {% endif %}
     </Contact>
     {% endfor %}
 
