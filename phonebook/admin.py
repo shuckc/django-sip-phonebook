@@ -4,7 +4,9 @@ from .models import Contact, Group
 import datetime
 
 class ContactAdmin(admin.ModelAdmin):
-    list_display = ('first_name', 'last_name', 'phone_number', 'job_title')
+    list_display = ('first_name', 'last_name', 'phone_number', 'job_title', 'group')
+    list_filter = ('group',)
+    list_select_related = ('group',)
 
 class GroupAdmin(admin.ModelAdmin):
     list_display = ('name', 'index')
