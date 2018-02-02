@@ -12,7 +12,7 @@ class Contact(models.Model):
 	last_name = models.CharField(max_length=100)
 	phone_number = models.CharField(max_length=100, blank=True)
 	job_title = models.CharField(max_length=100, blank=True)
-	group = models.ForeignKey(Group, blank=True, null=True)
+	group = models.ForeignKey(Group, blank=True, null=True, on_delete=models.CASCADE)
 
 	def __str__(self):
 		return "{0} {1}".format(self.first_name, self.last_name)
